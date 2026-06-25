@@ -1,43 +1,270 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio - Full Stack Developer</title>
     <link rel="stylesheet" href="basic.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <div class="container">
-    <div class="sidebar sidebarGo">
-    <nav>
-        <ul>
-            <li><a href="/">home</a></li>
-            <li><a href="/intro.html">My Intro</a></li>
-            <li><a href="/services.html">Services</a></li>
-            <li><a href="/contact.html">contact</a></li>
-            <li><a href="/blog.html">blog</a></li>
-        </ul>
-    </nav>
-</div> 
-<div class="main">
-    <div class="hamburger">
-        <img class="ham" src="ham.webp" alt="" width="23">
-        <img class="cross" src="cross.png" alt="" width="23">
-    </div>
-    <div class="infocontainer">
-    <div class="devinfo">
-        <div class="hello">Hi i am</div>
-        <div class="name">Sonam Maurya</div>
-        <div class ="about">Dveloper,Entreprenur</div>
-        <div class="buttons">
-            <button>Download cv</button>
-           <a href="/contact.html"> <button>Contact</button></a>
-        </div>
 
-    </div>
-    <div class="devpic"><img src="pic.png"></div>
-</div> 
-</div>  
-<script src="script.js"></script>
- 
+<body>
+    <header class="header">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#experience">Experience</a></li>
+            </ul>
+        </nav>
+        <a href="#contact" class="btn btn-primary hire-btn">Hire me</a>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h3>I'm a</h3>
+                <h1>FULL STACK<br>SOFTWARE<br>DEVELOPER<span class="dot">.</span></h1>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">Hire me/Projects</a>
+                </div>
+            </div>
+            <div class="hero-bg-text">DEVELOPER</div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="WhatsApp Image 2026-06-22 at 10.51.15.jpeg" alt="Candidate Profile Photo">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2>ABOUT ME</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="about-buttons">
+                        <a href="#contact" class="btn btn-primary">Hire me</a>
+                        <a href="my_resume__1_.pdf" class="btn btn-outline" download="my_resume__1_.pdf">Resume</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section">
+            <h2>PORTFOLIO</h2>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="mobile">Mobile App</button>
+                <button class="filter-btn" data-filter="web">Web App</button>
+                <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Mobile Project 1 -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-info">
+                        <span class="project-tag">MOBILE APP</span>
+                        <h3>Attendance App</h3>
+                        <p>A smart mobile application for tracking and managing attendance efficiently with geofencing and real-time reporting features.</p>
+                        <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-image-container">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80" alt="Attendance App" class="placeholder-img" style="object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Project 1 -->
+                <div class="project-card reverse" data-category="web">
+                    <div class="project-image-container">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="DSCP Portal" class="placeholder-img" style="object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">WEB APP</span>
+                        <h3>DSCP Portal</h3>
+                        <p>A highly secure defence communication portal designed for encrypted, reliable, and real-time secure messaging and data exchange.</p>
+                        <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Web Project 2 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-info">
+                        <span class="project-tag">WEB APP</span>
+                        <h3>Versgen</h3>
+                        <p>An innovative web platform where expressive and poetic shayari videos are generated automatically with beautiful typographic animations.</p>
+                        <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-image-container">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80" alt="Versgen" class="placeholder-img" style="object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Project 3 -->
+                <div class="project-card reverse" data-category="web">
+                    <div class="project-image-container">
+                        <div class="project-image">
+                            <img src="smart_diet_ui.png" alt="Smart Diet UI Mockup" class="placeholder-img" style="object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">WEB APP</span>
+                        <h3>Smart Diet</h3>
+                        <p>An intelligent nutrition assistant that suggests what to eat, tracks dietary habits, and provides healthy meal recommendations based on personal goals.</p>
+                        <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- UI/UX Project 1 -->
+                <div class="project-card" data-category="uiux">
+                    <div class="project-info">
+                        <span class="project-tag">UI/UX DESIGN</span>
+                        <h3>Finance Dashboard UI</h3>
+                        <p>A sleek, dark-mode inspired financial dashboard designed to provide a comprehensive and intuitive overview of user spending and investments.</p>
+                        <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-image-container">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Finance Dashboard UI" class="placeholder-img" style="object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UI/UX Project 2 -->
+                <div class="project-card reverse" data-category="uiux">
+                    <div class="project-image-container">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Healthcare Booking UX" class="placeholder-img" style="object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">UI/UX DESIGN</span>
+                        <h3>Healthcare Booking UX</h3>
+                        <p>A seamless, user-centric booking flow designed for a healthcare provider application, reducing cognitive load and simplifying appointment scheduling.</p>
+                        <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- UI/UX Project 3 -->
+                <div class="project-card" data-category="uiux">
+                    <div class="project-info">
+                        <span class="project-tag">UI/UX DESIGN</span>
+                        <h3>Landing Page Design</h3>
+                        <p>A clean, minimalist and highly convertible landing page designed for a SaaS product, focusing on clear typography and engaging micro-interactions.</p>
+                        <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-image-container">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80" alt="Landing Page Design" class="placeholder-img" style="object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-all-container">
+                <a href="#" class="btn btn-primary view-all-btn">View all</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <h2>SERVICES</h2>
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>MOBILE APP DEVELOPMENT</h3>
+                    <p>Building high-performance, cross-platform mobile applications using React Native and Flutter. From concept to deployment on App Store and Google Play with clean architecture and seamless user experiences.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-globe"></i></div>
+                    <h3>WEB APP DEVELOPMENT</h3>
+                    <p>Creating fast, scalable, and secure web applications using React, Node.js, and modern frameworks. Full-stack solutions with responsive design, REST APIs, database integration, and cloud deployment.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>UI/UX DESIGN</h3>
+                    <p>Designing intuitive, visually stunning interfaces that users love. Wireframing, prototyping, and user research to craft pixel-perfect designs that convert visitors into engaged users.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section">
+            <h2>EXPERIENCE</h2>
+            <div class="experience-grid">
+                <div class="tech-item"><i class="fab fa-aws" style="color: #FF9900;"></i><span>AWS</span></div>
+                <div class="tech-item"><i class="fab fa-css3-alt" style="color: #2965f1;"></i><span>CSS3</span></div>
+                <div class="tech-item"><i class="fab fa-react" style="color: #61DBFB;"></i><span>React.js</span></div>
+                <div class="tech-item"><i class="fab fa-html5" style="color: #e34c26;"></i><span>HTML</span></div>
+                <div class="tech-item"><i class="fab fa-java" style="color: #f89820;"></i><span>Java</span></div>
+                <div class="tech-item"><i class="fab fa-js" style="color: #F0DB4F;"></i><span>Javascript</span></div>
+                <div class="tech-item"><i class="fab fa-node-js" style="color: #3C873A;"></i><span>Node.JS</span></div>
+                <div class="tech-item"><i class="fab fa-python" style="color: #4B8BBE;"></i><span>Python</span></div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>CONTACT</h2>
+                    <div class="contact-methods">
+                        <div class="method-item">
+                            <div class="icon"><i class="fas fa-envelope"></i></div>
+                            <div class="text">Drop a Line<br><span>msonam189@gmail.com</span></div>
+                        </div>
+                        <div class="method-item">
+                            <div class="icon"><i class="fas fa-phone"></i></div>
+                            <div class="text">24/7 Service<br><span>+91 9984971256</span></div>
+                        </div>
+                        <div class="method-item">
+                            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="text">Location<br><span>Lucknow, India</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form" name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Name" required>
+                        <input type="email" name="Email" placeholder="Email" required>
+                        <textarea name="Message" placeholder="Message" rows="4" required></textarea>
+                        <button type="submit" class="btn btn-dark" id="submit-btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="copyright">&copy; 2026 Portfolio. All rights reserved.</div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/msonam/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
