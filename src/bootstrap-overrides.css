@@ -1,0 +1,122 @@
+/* bootstrap-overrides.css */
+:root {
+  --bs-body-bg: #0b0f19;
+  --bs-body-color: #ffffff;
+  --bs-primary: #5d3fff;
+  --bs-info: #2ab6ff;
+  --bs-secondary: rgba(18, 25, 43, 0.6);
+  --bs-border-color: rgba(255, 255, 255, 0.1);
+  --bs-font-sans-serif: 'Outfit', sans-serif;
+}
+
+html, body {
+  font-family: var(--bs-font-sans-serif);
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Retain background effects */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at 15% 50%, rgba(93, 63, 255, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 85% 30%, rgba(42, 182, 255, 0.15) 0%, transparent 50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Custom button gradients */
+.btn-primary {
+  background: linear-gradient(135deg, var(--bs-primary), var(--bs-info));
+  border: none;
+  box-shadow: 0 4px 15px rgba(93, 63, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(93, 63, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  color: #fff;
+  border-color: var(--bs-border-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: transparent;
+  border-color: var(--bs-info);
+  box-shadow: 0 0 15px rgba(42, 182, 255, 0.3);
+  color: #fff;
+}
+
+/* Custom Titles */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ffffff, var(--bs-info));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(42, 182, 255, 0.3);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Hero Section additions */
+.hero-bg-text {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-size: 12rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.02);
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+/* Portfolio Filters */
+.filter-btn {
+  background: transparent;
+  border: none;
+  color: #a0aabf;
+  padding: 5px 15px;
+  position: relative;
+}
+.filter-btn.active, .filter-btn:hover {
+  color: white;
+}
+.filter-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--bs-info);
+}
+
+/* Reveal effects */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
