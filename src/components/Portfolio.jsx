@@ -1,9 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Portfolio = () => {
     const [filter, setFilter] = useState('all');
     const [currentPage, setCurrentPage] = useState(1);
-    const projectsPerPage = 3;
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 767);
+        handleResize(); // Initialize on mount
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const projectsPerPage = isMobile ? 99 : 3;
 
     const projects = [
         {
