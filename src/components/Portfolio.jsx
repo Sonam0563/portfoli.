@@ -96,12 +96,12 @@ const Portfolio = () => {
                     <button className={`filter-btn ${filter === 'live' ? 'active' : ''}`} onClick={() => handleFilterChange('live')}>Live Project</button>
                 </div>
 
-                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 portfolio-carousel-mobile">
                     {currentProjects.map((project, i) => (
                         <div key={project.id} className="col" style={{ transitionDelay: `${(i % 3) * 0.1}s`, animation: 'fadeIn 0.5s ease-in-out' }}>
                             <div className="portfolio-card h-100 d-flex flex-column text-start">
                                 <div className="portfolio-img-wrap position-relative">
-                                    <img src={project.image} alt={project.title} className="portfolio-img img-fluid w-100" style={{ height: '240px', objectFit: 'cover' }} />
+                                    <img src={project.image} alt={project.title} className="portfolio-img img-fluid w-100" style={{ height: '240px', objectFit: 'contain', backgroundColor: 'var(--bs-dark)' }} />
                                     <div className="position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill fw-bold small shadow-sm" style={{ background: 'rgba(11, 15, 25, 0.85)', color: 'var(--bs-info)', border: '1px solid rgba(42,182,255,0.3)', backdropFilter: 'blur(5px)' }}>
                                         {project.tag}
                                     </div>
@@ -122,7 +122,7 @@ const Portfolio = () => {
 
                 {/* Pagination Controls */}
                 {totalPages > 1 && (
-                    <div className="d-flex justify-content-center align-items-center gap-3 mt-5">
+                    <div className="d-none d-md-flex justify-content-center align-items-center gap-3 mt-5">
                         <button
                             className="btn btn-outline-info rounded-circle d-flex align-items-center justify-content-center"
                             style={{ width: '40px', height: '40px' }}

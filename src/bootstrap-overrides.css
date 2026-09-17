@@ -151,6 +151,47 @@ body::before {
     transform: translateX(5px);
 }
 
+/* About Me Image Responsive Styles */
+.about-me-img {
+    width: 280px;
+    aspect-ratio: 1 / 1;
+    object-position: top;
+}
+@media (max-width: 767px) {
+    .about-me-img {
+        width: 200px;
+    }
+}
+
+/* Portfolio Mobile Carousel */
+@media (max-width: 767px) {
+    .portfolio-carousel-mobile {
+        display: flex;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 2rem;
+        -webkit-overflow-scrolling: touch;
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    .portfolio-carousel-mobile::-webkit-scrollbar {
+        height: 4px;
+    }
+    .portfolio-carousel-mobile::-webkit-scrollbar-thumb {
+        background: rgba(42, 182, 255, 0.4);
+        border-radius: 4px;
+    }
+    .portfolio-carousel-mobile > .col {
+        flex: 0 0 85% !important;
+        max-width: 85% !important;
+        scroll-snap-align: center;
+    }
+}
+
 /* Contact Input Styles */
 .contact-input {
   background: rgba(255, 255, 255, 0.03) !important;

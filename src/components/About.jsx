@@ -31,9 +31,9 @@ const About = () => {
                             <h2 className="display-5 fw-bolder mb-5 text-white" style={{ letterSpacing: '1px' }}>
                                 A little about me.
                             </h2>
-                            <div className="position-relative d-inline-block mx-auto mb-4 mb-lg-0">
-                                <div className="position-absolute rounded-4" style={{ top: '15px', left: '15px', width: '100%', height: '100%', border: '2px solid var(--bs-info)', zIndex: 0, boxShadow: '0 0 15px rgba(42, 182, 255, 0.3)' }}></div>
-                                <img src="/about_me.jpeg" alt="About Me" className="img-fluid rounded-4 position-relative shadow-lg" style={{ zIndex: 1, maxWidth: '280px', objectFit: 'cover' }} />
+                            <div className="position-relative d-inline-block mx-auto mb-4 mb-lg-0 about-me-img-wrapper">
+                                <div className="position-absolute rounded-4 about-me-img-backdrop" style={{ top: '15px', left: '15px', width: '100%', height: '100%', border: '2px solid var(--bs-info)', zIndex: 0, boxShadow: '0 0 15px rgba(42, 182, 255, 0.3)' }}></div>
+                                <img src="/about_me.jpeg" alt="About Me" className="img-fluid rounded-4 position-relative shadow-lg about-me-img" style={{ zIndex: 1, objectFit: 'cover' }} />
                             </div>
                         </div>
                         <div className="col-lg-7 reveal" style={{ transitionDelay: '0.2s' }}>
