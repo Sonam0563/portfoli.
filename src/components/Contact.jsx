@@ -27,9 +27,9 @@ const Contact = () => {
     return (
         <section id="contact" className="py-5">
             <div className="container py-5">
-                <div className="row g-5 rounded-5 p-4 p-md-5" style={{ background: 'linear-gradient(135deg, rgba(93, 63, 255, 0.1), rgba(42, 182, 255, 0.1))', border: '1px solid var(--bs-border-color)', backdropFilter: 'blur(10px)' }}>
+                <div className="row g-5 rounded-5 p-4 p-md-5" style={{ background: 'rgba(18, 25, 43, 0.6)', border: '1px solid rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(15px)' }}>
                     <div className="col-lg-5 contact-info reveal">
-                        <h2 className="mb-4 fw-bold">CONTACT</h2>
+                        <h2 className="mb-4 fw-bolder section-title">CONTACT</h2>
                         <div className="d-flex flex-column gap-4">
                             <div className="d-flex align-items-center gap-3">
                                 <div className="d-flex align-items-center justify-content-center rounded-circle fs-4 text-info" style={{ width: '50px', height: '50px', background: 'rgba(255, 255, 255, 0.1)' }}>
@@ -61,12 +61,12 @@ const Contact = () => {
                         </div>
                     </div>
                     <div className="col-lg-7 contact-form reveal">
-                        <form id="contact-form" name="submit-to-google-sheet" onSubmit={handleSubmit} className="d-flex flex-column gap-3">
-                            <input type="text" name="Name" className="form-control form-control-lg bg-dark text-white border-secondary" placeholder="Name" required />
-                            <input type="email" name="Email" className="form-control form-control-lg bg-dark text-white border-secondary" placeholder="Email" required />
-                            <textarea name="Message" className="form-control form-control-lg bg-dark text-white border-secondary" placeholder="Message" rows="4" required></textarea>
-                            <button type="submit" className="btn btn-dark btn-lg align-self-start px-5" id="submit-btn" disabled={isSubmitting}>
-                                {isSubmitting ? 'Sending...' : 'Send'}
+                        <form id="contact-form" name="submit-to-google-sheet" onSubmit={handleSubmit} className="d-flex flex-column gap-4">
+                            <input type="text" name="Name" className="form-control form-control-lg contact-input" placeholder="Your Name" required />
+                            <input type="email" name="Email" className="form-control form-control-lg contact-input" placeholder="Your Email" required />
+                            <textarea name="Message" className="form-control form-control-lg contact-input" placeholder="Your Message" rows="5" required></textarea>
+                            <button type="submit" className="btn btn-lg align-self-start px-5 mt-2 fw-bold text-dark shadow" id="submit-btn" disabled={isSubmitting} style={{ background: 'linear-gradient(90deg, #fff, var(--bs-info))', border: 'none', borderRadius: '30px' }}>
+                                {isSubmitting ? 'Sending...' : 'Send Message'}
                             </button>
                         </form>
                     </div>

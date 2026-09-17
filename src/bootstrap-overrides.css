@@ -108,15 +108,85 @@ body::before {
 /* Reveal effects */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(40px) scale(0.95);
+  transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .reveal.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.portfolio-card {
+    background: rgba(18, 25, 43, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1.25rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+}
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(42, 182, 255, 0.4);
+    box-shadow: 0 15px 30px rgba(42, 182, 255, 0.15);
+}
+.portfolio-img-wrap {
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.portfolio-img {
+    transition: transform 0.6s ease;
+}
+.portfolio-card:hover .portfolio-img {
+    transform: scale(1.1);
+}
+.portfolio-link {
+    transition: all 0.3s ease;
+}
+.portfolio-card:hover .portfolio-link {
+    color: var(--bs-info) !important;
+    transform: translateX(5px);
+}
+
+/* Contact Input Styles */
+.contact-input {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  transition: all 0.3s ease;
+}
+.contact-input:focus {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: var(--bs-info) !important;
+  box-shadow: 0 0 15px rgba(42, 182, 255, 0.3) !important;
+  outline: none;
+}
+.contact-input::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Timeline Responsive Styles */
+.timeline-card {
+    transition: all 0.3s ease;
+}
+.timeline-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(42, 182, 255, 0.4) !important;
+    box-shadow: 0 10px 30px rgba(42, 182, 255, 0.1);
+}
+@media (max-width: 767px) {
+    .timeline-line {
+        left: 20px !important;
+        transform: none !important;
+    }
+    .timeline-dot {
+        left: 20px !important;
+        transform: translateX(-50%) !important;
+    }
+    .timeline-card {
+        margin-left: 20px;
+    }
 }

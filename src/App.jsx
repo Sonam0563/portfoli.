@@ -17,11 +17,14 @@ function App() {
         });
     }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
-    const revealElements = document.querySelectorAll('.reveal');
-    revealElements.forEach(el => revealObserver.observe(el));
+    const timeout = setTimeout(() => {
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach(el => revealObserver.observe(el));
+    }, 100);
 
     return () => {
-      revealElements.forEach(el => revealObserver.unobserve(el));
+      clearTimeout(timeout);
+      revealObserver.disconnect();
     };
   }, []);
 

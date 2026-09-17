@@ -60,9 +60,6 @@ const Header = () => {
                         <li className="nav-item">
                             <a className={`nav-link ${activeSection === 'services' ? 'active text-white fw-bold' : ''}`} href="#services" onClick={(e) => handleLinkClick(e, '#services')}>Services</a>
                         </li>
-                        <li className="nav-item">
-                            <a className={`nav-link ${activeSection === 'experience' ? 'active text-white fw-bold' : ''}`} href="#experience" onClick={(e) => handleLinkClick(e, '#experience')}>Experience</a>
-                        </li>
                     </ul>
                     <a href="#contact" className="btn btn-primary px-4 rounded-pill" onClick={(e) => handleLinkClick(e, '#contact')}>Hire me</a>
                 </div>
